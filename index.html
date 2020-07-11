@@ -4,37 +4,175 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <meta name="author" content="Nicholas Simon-Brecke">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
-    <title>Nicholas Simon-Brecke</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <link rel="shortcut icon" href="/static/img/rocket_icon.ico">
+
+<title>Nicholas S-B Portfollio and Engineering Website</title>
+
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/experience">Experience</a></li>
-          <li><a href="/resume" target="_blank">Resume</a></li>
-          <li><a href="/hanabi">Hanabi</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Nicholas Simon-Brecke</h1>
-      <h2>Rockets and Coding and Manufacturing... Oh My!</h2>
-      <button onclick="window.location.href='/hanabi'">Go To Hanabi</button>
-      <div id="about">
-        <h3>About Me</h3>
-        <p>
-          Hey there, I am Nicholas S-B, Junior at Georgia Tech studying Mechanical Engineering.
-          I am an Eagle Scout from Atlanta, Georgia and have a wide range of skills and interests.
-          I enjoy working on rockets, coding, and using tools to create things.
-        </p>
-        <p>
-          I am part of the Georgia Tech Rocket Club on the Spaceport America Cup team
-          where we try to get a rocket to 30,000 feet into the air.
-        </p>
-      </div>
-    </main>
+
+<!-- NAVIGATION -->
+<div class="w3-bar w3-black w3-xlarge">
+  <a href="/" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none">NICHOLAS S-B</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-hover-text-indigo w3-button  w3-hide-medium w3-hide-large w3-right w3-hover-none" onclick="toggle('mobile-nav')"><i class="fa fa-bars"></i></a>
+  <span class="w3-right w3-mobile w3-hide-small">
+    <a href="/projects" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Projects</a>
+    <a href="/experience" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Experience</a>
+    <a href="/resume" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Resume</a>
+  </span>
+</div>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav" class="w3-bar-block w3-hover-none w3-hide w3-hide-large w3-hover-text-indigo w3-hide-medium">
+  <a href="/projects" class="w3-bar-item w3-button">Projects</a>
+  <a href="/experience" class="w3-bar-item w3-button">Experience</a>
+  <a href="/resume" class="w3-bar-item w3-button">Resume</a>
+</div>
+
+
+<!-- SHOWCASE -->
+<section class="showcase">
+  <div class="w3-container w3-center">
+    <h1 class="w3-animate-opacity">Hello, I'm Nicholas Simon-Brecke</h1>
+    <hr>
+    <h3 class="w3-animate-opacity">Rockets and Coding and Manufacturing... Oh My!</h3>
+    <button class="w3-button w3-large w3-indigo" onclick="window.location.href='/hanabi'">Go To Hanabi</button>
+    <!-- <button class="w3-button w3-large w3-border w3-border-indigo" disabled onclick="window.location.href='/skulls'">Go To Skulls</button> -->
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="w3-container">
+  <!-- <img src="/static/img/rocket.svg" alt="Flying Rocket"> -->
+  <h4>Who am I?</h4>
+  <p class="w3-half">
+    Hey, I'm Nicholas Simon-Brecke, an Eagle Scout from Atlanta, Georiga.
+    I am a Third Year studying Mechanical Engineering at Georgia Tech.
+    I love making ideas into reality and playing board games with friends.
+    I have a wide range of interests including machining, rocketry, and coding.
+    I am part of the Georgia Tech Spaceport America Cup team where each year many
+    collegiate teams try to launch a rocket and get it the closest to a target
+    altitude of 30,000 feet!! I enjoy programming and coded a version of the
+    board game Hanabi to play online with my friends from scratch.
+  </p>
+  <img src="/static/img/rocket.png" alt="Nicholas Simon-Brecke" class="w3-image w3-half">
+</div>
+
+<!-- SKILLS -->
+<div class="w3-container">
+  <h4>Skills</h4>
+  <ul class="w3-ul w3-card-2">
+    <li>CAD/CAM:	Autodesk Fusion360, Solidworks, Inventor, Revit, Torchmate</li>
+    <li>Machining: 	CNC Mill and Lathe, Manual Mill and Lathe, Waterjet, 3D Printer</li>
+    <li>Construction: 	Welding, Sawing, Drilling, Fasteners</li>
+    <li>Coding: 	Python, MatLab, JavaScript, HTML & CSS</li>
+    <li>Electronics:  	Oscilloscope, Prototyping Board, Waveform Generator, Op-Amps</li>
+  </ul>
+</div>
+
+<!-- PROJECTS -->
+<div class="w3-container w3-margin-top w3-center">
+  <!-- <img src="/static/img/firework.png" alt="Firework"> -->
+  <h2><a href="/projects">Projects</a></h2>
+
+  <div class="w3-col w3-hide-small m3">
+    <img src="/static/img/firework.png" alt="" class="w3-image">
+  </div>
+  <div class="w3-rest w3-hide-small">
+    <div class="w3-row">
+      <img src="/static/img/firework1.jpg" alt="Symtomics" class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+      <img src="/static/img/firework1.jpg" alt="Hanabi"    class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+      <img src="/static/img/firework1.jpg" alt="Rocketry"  class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+    </div>
+    <div class="w3-row w3-hide-small">
+      <img src="/static/img/firework1.jpg" alt="Sidewalk App" class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+      <img src="/static/img/firework1.jpg" alt="Eagle Scout"  class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+      <img src="/static/img/firework1.jpg" alt="ME 1770"      class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+    </div>
+  </div>
+
+  <div class="w3-hide-medium w3-hide-large">
+    <button onclick="toggle('symptomics')" class="w3-button w3-block w3-black w3-left-align">Symtomics</button>
+    <div id="symptomics" class="w3-hide">
+      <p>Created android app for rapid pre-screening of Covid-19 Symptoms</p>
+    </div>
+
+    <button onclick="toggle('hanabi')" class="w3-button w3-block w3-black w3-left-align">Hanabi</button>
+    <div id="hanabi" class="w3-hide">
+      <p>Play Hanabi (Multiplayer Blind Cooperative Solitare) online with friends</p>
+    </div>
+
+    <button onclick="toggle('rocketry')" class="w3-button w3-block w3-black w3-left-align">Spaceport America Cup</button>
+    <div id="rocketry" class="w3-hide">
+      <p>A machinist on team as well as part of the CO2 Deployment</p>
+    </div>
+
+    <button onclick="toggle('sidewalk')" class="w3-button w3-block w3-black w3-left-align">Sidewalk Scout</button>
+    <div id="sidewalk" class="w3-hide">
+      <p>Revamped Sidewalk Scout App for tracking sidewalk condtions</p>
+    </div>
+
+    <button onclick="toggle('eagle')" class="w3-button w3-block w3-black w3-left-align">Eagle Scout</button>
+    <div id="eagle" class="w3-hide">
+      <p>Created a mini free libray for my Eagle Scout Project</p>
+    </div>
+
+    <button onclick="toggle('me1770')" class="w3-button w3-block w3-black w3-left-align">ME 1770</button>
+    <div id="me1770" class="w3-hide">
+      <p>Worked as part of team to design and iterate a product</p>
+    </div>
+  </div>
+
+
+  <!-- <ul class="w3-ul w3-card-2">
+    <li>Symptomics - Created android app for rapid pre-screening of Covid-19 Symptoms</li>
+    <li>Hanabi - Play Hanabi (Multiplayer Blind Cooperative Solitare) online with friends</li>
+    <li>Spaceport America Cup - A machinist on team as well as part of the CO2 Deployment</li>
+    <li>Eagle Scouts - Created a mini free libray for my Eagle Scout Project</li>
+    <li>ME 1770 - Worked as part of team to design and iterate a product</li>
+    <li>Sidewalk Scout - Revamped Sidewalk Scout App for tracking sidewalk condtions</li>
+  </ul> -->
+</div>
+
+<!-- EXPERIENCE -->
+<div class="w3-container">
+  <h4>Experience</h4>
+  <ul class="w3-ul w3-card-2">
+    <li>IT Student Assistant - I put new computer images on lab computers &
+      installed and configured software for professors and graduate students</li>
+    <li>Construction Worker - Remodeled and retiled bathroom & built large
+      picnic benches for outdoor market and tore down screened in porch and
+      replaced it with a sunroom and concrete patio</li>
+    <li>G3 Robotics Fabrication Co-Lead - Setup and tuned new Torchmate
+      computer-controlled plasma cutter and trained other team members.</li>
+    <li>Scout Leader</li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+  <span>Photo by <a href="https://unsplash.com/@arcreates?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anthony Roberts</a> on <a href="https://unsplash.com/s/photos/fireworks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+  <span>Photo by <a href="https://unsplash.com/@devalpp?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Deval Parikh</a> on <a href="https://unsplash.com/s/photos/city-sidewalk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+</footer>
+
+
+
+<!-- SCRIPT -->
+<script>
+function toggle(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
   </body>
 </html>
