@@ -4,29 +4,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <meta name="author" content="Nicholas Simon-Brecke">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
-    <title>Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <link rel="shortcut icon" href="/static/img/rocket_icon.ico">
+
+<title>Experience</title>
+
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/experience">Experience</a></li>
-          <li><a href="/resume" target="_blank">Resume</a></li>
-          <li><a href="/hanabi">Hanabi</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <ul style="list-style-type:circle">
-        <li>App Designer</li>
-        <li>IT Student Assistant</li>
-        <li>C.N.C. Builders</li>
-        <li>G3 Robotics</li>
-        <li>Scouts</li>
-      </ul>
-    </main>
+
+<!-- NAVIGATION -->
+<div class="w3-bar w3-black w3-xlarge">
+  <a href="/" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none">NICHOLAS S-B</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-hover-text-indigo w3-button  w3-hide-medium w3-hide-large w3-right w3-hover-none" onclick="toggle('mobile-nav')"><i class="fa fa-bars"></i></a>
+  <span class="w3-right w3-mobile w3-hide-small">
+    <a href="/projects" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Projects</a>
+    <a href="/experience" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Experience</a>
+    <a href="/resume" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Resume</a>
+  </span>
+</div>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav" class="w3-bar-block w3-hover-none w3-hide w3-hide-large w3-hover-text-indigo w3-hide-medium">
+  <a href="/projects" class="w3-bar-item w3-button">Projects</a>
+  <a href="/experience" class="w3-bar-item w3-button">Experience</a>
+  <a href="/resume" class="w3-bar-item w3-button">Resume</a>
+</div>
+
+
+
+<ul class="w3-ul w3-card-4">
+  <li>App Designer</li>
+  <li>IT Student Assistant</li>
+  <li>C.N.C. Builders</li>
+  <li>G3 Robotics</li>
+  <li>Scouts</li>
+</ul>
+
+
+<!-- SCRIPT -->
+<script>
+function toggle(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
   </body>
 </html>
