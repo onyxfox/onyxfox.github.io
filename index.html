@@ -5,141 +5,201 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <meta name="author" content="Nicholas Simon-Brecke">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/a420ba455b.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="/static/style.css"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="rocket_icon.ico?">
-
-<title>Nicholas S-B Portfollio and Engineering Website</title>
+    <link rel="shortcut icon" href="/static/img/rocket_icon.ico">
+    
+<title>Nicholas' Portfollio Website</title>
 
   </head>
   <body>
 
 <!-- NAVIGATION -->
-<div class="w3-bar w3-black w3-xlarge">
-  <a href="/" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none">NICHOLAS S-B</a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-hover-text-indigo w3-button  w3-hide-medium w3-hide-large w3-right w3-hover-none" onclick="toggle('mobile-nav')"><i class="fa fa-bars"></i></a>
-  <span class="w3-right w3-mobile w3-hide-small">
-    <a href="/projects" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Projects</a>
-    <a href="/experience" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Experience</a>
-    <a href="/resume" class="w3-bar-item w3-button w3-hover-text-indigo w3-hover-none w3-mobile">Resume</a>
-  </span>
-</div>
+<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
 
-<!-- MOBILE NAV -->
-<div id="mobile-nav" class="w3-bar-block w3-hover-none w3-hide w3-hide-large w3-hover-text-indigo w3-hide-medium">
-  <a href="/projects" class="w3-bar-item w3-button">Projects</a>
-  <a href="/experience" class="w3-bar-item w3-button">Experience</a>
-  <a href="/resume" class="w3-bar-item w3-button">Resume</a>
-</div>
+    <a href="/" class="navbar-item"><strong>NICHOLAS</strong></a>
+
+    <a href="javascript:void(0)" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="#about" class="navbar-link"><strong>About Me</strong></a>
+        <div class="navbar-dropdown">
+          <a href="#skills" class="navbar-item"><strong>Skills</strong></a>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="#experience" class="navbar-link"><strong>Experience</strong></a>
+        <div class="navbar-dropdown">
+          <a href="#projects" class="navbar-item"><strong>Projects</strong></a>
+          <a href="#work" class="navbar-item"><strong>Career</strong></a>
+        </div>
+      </div>
+    
+      <a href="/resume" class="navbar-item"><strong>Resume</strong></a>
+      <a class="navbar-item"></a>
+    </div>
+  </div>
+</nav>
 
 
-<!-- SHOWCASE -->
-<section class="showcase">
-  <div class="w3-container w3-center">
-    <h1 class="w3-animate-opacity">Hello, I'm Nicholas Simon-Brecke</h1>
-    <hr>
-    <h3 class="w3-animate-opacity">Rockets and Coding and Manufacturing... Oh My!</h3>
-    <button class="w3-button w3-large w3-indigo" onclick="window.location.href='/hanabi'">Go To Hanabi</button>
-    <!-- <button class="w3-button w3-large w3-border w3-border-indigo" disabled onclick="window.location.href='/skulls'">Go To Skulls</button> -->
+
+    
+<!-- HERO -->
+<section class="hero is-medium is-warning">
+  <div class="hero-body">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        <p class="title is-1">
+          Hello, I'm Nicholas Simon-Brecke
+        </p>
+        <p class="subtitle is-3">
+          Rockets and Manufacturing and Coding... Oh My!
+        </p>
+      </div>
+      <div class="column">
+        <img src="/static/img/rocket.png" alt="Nicholas Simon-Brecke" class="image is-256x256">
+      </div>
+    </div>
   </div>
 </section>
 
+
+
 <!-- ABOUT -->
-<div class="w3-container">
-  <!-- <img src="/static/img/rocket.svg" alt="Flying Rocket"> -->
-  <h4>Who am I?</h4>
-  <p class="w3-half">
-    Hey, I'm Nicholas Simon-Brecke, an Eagle Scout from Atlanta, Georiga.
-    I am a Third Year studying Mechanical Engineering at Georgia Tech.
-    I love making ideas into reality and playing board games with friends.
-    I have a wide range of interests including machining, rocketry, and coding.
-    I am part of the Georgia Tech Spaceport America Cup team where each year many
-    collegiate teams try to launch a rocket and get it the closest to a target
-    altitude of 30,000 feet!! I enjoy programming and coded a version of the
-    board game Hanabi to play online with my friends from scratch.
-  </p>
-  <img src="/static/img/rocket.png" alt="Nicholas Simon-Brecke" class="w3-image w3-half">
+<br id="about"><br><br>
+<div class="container">
+  <div class="card">
+    <article class="message is-dark is-medium">
+      <div class="message-header">
+        <p>Who Am I?</p>
+        <button class="is-medium" aria-label="delete"></button>
+      </div>
+      <div class="message-body columns">
+        <div class="column is-one-third">
+          <figure class="image is-square">
+            <img class="is-rounded" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          </figure>
+        </div>
+        <p>
+          Hey, I'm Nicholas Simon-Brecke, an Eagle Scout from Atlanta, Georiga.
+          I am a Third Year studying Mechanical Engineering at Georgia Tech.
+          I love making ideas into reality and playing board games with friends.
+          I have a wide range of interests including machining, rocketry, and coding.
+          I am part of the Georgia Tech Spaceport America Cup team where each year many
+          collegiate teams try to launch a rocket and get it the closest to a target
+          altitude of 30,000 feet!! I enjoy programming and coded a version of the
+          board game Hanabi to play online with my friends from scratch.
+        </p>
+      </div>
+    </article>
+  </div>
 </div>
+
+
 
 <!-- SKILLS -->
-<div class="w3-container">
-  <h4>Skills</h4>
-  <ul class="w3-ul w3-card-2">
-    <li>CAD/CAM:	Autodesk Fusion360, Solidworks, Inventor, Revit, Torchmate</li>
-    <li>Machining: 	CNC Mill and Lathe, Manual Mill and Lathe, Waterjet, 3D Printer</li>
-    <li>Construction: 	Welding, Sawing, Drilling, Fasteners</li>
-    <li>Coding: 	Python, MatLab, JavaScript, HTML & CSS</li>
-    <li>Electronics:  	Oscilloscope, Prototyping Board, Waveform Generator, Op-Amps</li>
-  </ul>
-</div>
-
-<!-- PROJECTS -->
-<div class="w3-container w3-margin-top w3-center">
-  <!-- <img src="/static/img/firework.png" alt="Firework"> -->
-  <h2><a href="/projects">Projects</a></h2>
-
-  <div class="w3-col w3-hide-small m3">
-    <img src="/static/img/firework.png" alt="" class="w3-image">
-  </div>
-  <div class="w3-rest w3-hide-small">
-    <div class="w3-row">
-      <img src="/static/img/firework1.jpg" alt="Symtomics" class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
-      <img src="/static/img/firework1.jpg" alt="Hanabi"    class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
-      <img src="/static/img/firework1.jpg" alt="Rocketry"  class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+<div class="section container">
+  <br>
+  <h1 class="title is-3" id="skills">Skills</h1>
+  <div class="field is-grouped is-grouped-multiline">
+    <div class="tags are-large" id="Design">
+      <span class="tag is-light is-primary icon-text"><span class="icon"><i class="fas fa-drafting-compass"></i></span><span>Autodesk Fusion360</span></span>
+      <span class="tag is-light is-primary icon-text"><span class="icon"><i class="fas fa-drafting-compass"></i></span><span>Solidworks</span></span>
+      <span class="tag is-light is-primary icon-text"><span class="icon"><i class="fas fa-drafting-compass"></i></span><span>Autodesk Inventor</span></span>
+      <span class="tag is-light is-primary icon-text"><span class="icon"><i class="fas fa-drafting-compass"></i></span><span>Autodesk Revit</span></span>
+      <span class="tag is-light is-primary icon-text"><span class="icon"><i class="fas fa-drafting-compass"></i></span><span>Torchmate</span></span>
     </div>
-    <div class="w3-row w3-hide-small">
-      <img src="/static/img/firework1.jpg" alt="Sidewalk App" class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
-      <img src="/static/img/firework1.jpg" alt="Eagle Scout"  class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
-      <img src="/static/img/firework1.jpg" alt="ME 1770"      class="w3-image w3-col w3-third w3-opacity w3-hover-opacity-off">
+    <div class="tags are-large" id="Machining">
+      <span class="tag is-light is-danger icon-text"><span class="icon"><i class="fas fa-hard-hat"></i></span><span>CNC Mill</span></span>
+      <span class="tag is-light is-danger icon-text"><span class="icon"><i class="fas fa-hard-hat"></i></span><span>Manual Mill</span></span>
+      <span class="tag is-light is-danger icon-text"><span class="icon"><i class="fas fa-hard-hat"></i></span><span>CNC Lathe</span></span>
+      <span class="tag is-light is-danger icon-text"><span class="icon"><i class="fas fa-hard-hat"></i></span><span>Manual Lathe</span></span>
+      <span class="tag is-light is-danger icon-text"><span class="icon"><i class="fas fa-hard-hat"></i></span><span>3D Printing</span></span>
+      <span class="tag is-light is-danger icon-text"><span class="icon"><i class="fas fa-hard-hat"></i></span><span>Waterjet</span></span>
     </div>
-  </div>
-
-  <div class="w3-hide-medium w3-hide-large">
-    <button onclick="toggle('symptomics')" class="w3-button w3-block w3-black w3-left-align">Symtomics</button>
-    <div id="symptomics" class="w3-hide">
-      <p>Created android app for rapid pre-screening of Covid-19 Symptoms</p>
+    <div class="tags are-large" id="Coding">
+      <span class="tag is-light is-success icon-text"><span class="icon"><i class="fas fa-laptop-code"></i></span><span>Python</span></span>
+      <span class="tag is-light is-success icon-text"><span class="icon"><i class="fas fa-laptop-code"></i></span><span>Matlab</span></span>
+      <span class="tag is-light is-success icon-text"><span class="icon"><i class="fas fa-laptop-code"></i></span><span>HTML & CSS</span></span>
+      <span class="tag is-light is-success icon-text"><span class="icon"><i class="fas fa-laptop-code"></i></span><span>Javascript</span></span>
+      <span class="tag is-light is-success icon-text"><span class="icon"><i class="fas fa-laptop-code"></i></span><span>Java</span></span>
     </div>
-
-    <button onclick="toggle('hanabi')" class="w3-button w3-block w3-black w3-left-align">Hanabi</button>
-    <div id="hanabi" class="w3-hide">
-      <p>Play Hanabi (Multiplayer Blind Cooperative Solitare) online with friends</p>
+    <div class="tags are-large" id="Construction">
+      <span class="tag is-light is-warning icon-text"><span class="icon"><i class="fas fa-tools"></i></span><span>Sawing</span></span>
+      <span class="tag is-light is-warning icon-text"><span class="icon"><i class="fas fa-tools"></i></span><span>Drilling</span></span>
+      <span class="tag is-light is-warning icon-text"><span class="icon"><i class="fas fa-tools"></i></span><span>Nuts & Bolts</span></span>
+      <span class="tag is-light is-warning icon-text"><span class="icon"><i class="fas fa-tools"></i></span><span>Fasteners</span></span>
     </div>
-
-    <button onclick="toggle('rocketry')" class="w3-button w3-block w3-black w3-left-align">Spaceport America Cup</button>
-    <div id="rocketry" class="w3-hide">
-      <p>A machinist on team as well as part of the CO2 Deployment</p>
-    </div>
-
-    <button onclick="toggle('sidewalk')" class="w3-button w3-block w3-black w3-left-align">Sidewalk Scout</button>
-    <div id="sidewalk" class="w3-hide">
-      <p>Revamped Sidewalk Scout App for tracking sidewalk condtions</p>
-    </div>
-
-    <button onclick="toggle('eagle')" class="w3-button w3-block w3-black w3-left-align">Eagle Scout</button>
-    <div id="eagle" class="w3-hide">
-      <p>Created a mini free libray for my Eagle Scout Project</p>
-    </div>
-
-    <button onclick="toggle('me1770')" class="w3-button w3-block w3-black w3-left-align">ME 1770</button>
-    <div id="me1770" class="w3-hide">
-      <p>Worked as part of team to design and iterate a product</p>
+    <div class="tags are-large" id="Electronics">
+      <span class="tag is-light is-info icon-text"><span class="icon"><i class="fas fa-plug"></i></span><span>Oscilloscope</span></span>
+      <span class="tag is-light is-info icon-text"><span class="icon"><i class="fas fa-plug"></i></span><span>Waveform Generator</span></span>
+      <span class="tag is-light is-info icon-text"><span class="icon"><i class="fas fa-plug"></i></span><span>Op-Amps</span></span>
+      <span class="tag is-light is-info icon-text"><span class="icon"><i class="fas fa-plug"></i></span><span>Prototyping Board</span></span>
+      <span class="tag is-light is-info icon-text"><span class="icon"><i class="fas fa-plug"></i></span><span>Soldering Iron</span></span>
     </div>
   </div>
-
-
-  <!-- <ul class="w3-ul w3-card-2">
-    <li>Symptomics - Created android app for rapid pre-screening of Covid-19 Symptoms</li>
-    <li>Hanabi - Play Hanabi (Multiplayer Blind Cooperative Solitare) online with friends</li>
-    <li>Spaceport America Cup - A machinist on team as well as part of the CO2 Deployment</li>
-    <li>Eagle Scouts - Created a mini free libray for my Eagle Scout Project</li>
-    <li>ME 1770 - Worked as part of team to design and iterate a product</li>
-    <li>Sidewalk Scout - Revamped Sidewalk Scout App for tracking sidewalk condtions</li>
-  </ul> -->
 </div>
 
 <!-- EXPERIENCE -->
-<div class="w3-container">
+<div class="container section" id="experience">
+  <h1 class="title is-3" id="projects">Experience</h1>
+</div>
+
+<!-- PROJECTS -->
+<div class="section container">
+  <h1 class="title is-3" id="projects">Projects</h1>
+  <div class="is-ancestor">
+    <div class="tile is-4 is-vertical is-parent">
+      <div class="tile is-child box">
+        <p class="title">One</p>
+      </div>
+      <div class="tile is-child box">
+        <p class="title">Two</p>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box">
+        <p class="title">Three</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul class="">
+  <li>Symptomics - Created android app for rapid pre-screening of Covid-19 Symptoms</li>
+  <li>Hanabi - Play Hanabi (Multiplayer Blind Cooperative Solitare) online with friends</li>
+  <li>Spaceport America Cup - A machinist on team as well as part of the CO2 Deployment</li>
+  <li>Eagle Scouts - Created a mini free libray for my Eagle Scout Project</li>
+  <li>ME 1770 - Worked as part of team to design and iterate a product</li>
+  <li>Sidewalk Scout - Revamped Sidewalk Scout App for tracking sidewalk condtions</li>
+</ul>
+<!-- <div class="w3-container w3-margin-top w3-center">
+  <img src="/static/img/firework.png" alt="Firework">
+  <h2><a href="/projects">Projects</a></h2>
+</div> -->
+
+  
+
+<!-- Career -->
+<div class="container section" id="work">
+  <h1 class="title is-3">Career</h1>
+</div>
+<!-- <div class="w3-container">
   <h4>Experience</h4>
   <ul class="w3-ul w3-card-2">
     <li>IT Student Assistant - I put new computer images on lab computers &
@@ -151,27 +211,48 @@
       computer-controlled plasma cutter and trained other team members.</li>
     <li>Scout Leader</li>
   </ul>
-</div>
+</div> -->
 
 <!-- FOOTER -->
 <footer>
   <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-  <span>Photo by <a href="https://unsplash.com/@arcreates?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anthony Roberts</a> on <a href="https://unsplash.com/s/photos/fireworks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-  <span>Photo by <a href="https://unsplash.com/@devalpp?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Deval Parikh</a> on <a href="https://unsplash.com/s/photos/city-sidewalk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+  <span>Photo by <a href="https://unsplash.com/@arcreates?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anthony Roberts</a> on <a href="https://unsplash.com/s/photos/fireworks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> <br>
+  <span>Photo by <a href="https://unsplash.com/@devalpp?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Deval Parikh</a> on <a href="https://unsplash.com/s/photos/city-sidewalk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> <br>
+  <span>Photo by <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Tim Mossholder</a> on <a href="https://unsplash.com/s/photos/rocket?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> <br>
+  <span>Photo by <a href="https://unsplash.com/@marvelous?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Marvin Meyer</a> on <a href="https://unsplash.com/s/photos/team?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> <br>
+  <span>Photo by <a href="https://unsplash.com/@omgitsyeshi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yeshi Kangrang</a> on <a href="https://unsplash.com/s/photos/city?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> <br>
+  <span>Photo by <a href="https://unsplash.com/@brock222?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Richard Lee</a> on <a href="https://unsplash.com/s/photos/eagle?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 </footer>
 
 
-
+    
 <!-- SCRIPT -->
 <script>
-function toggle(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
+  document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
   }
-}
+
+  });
 </script>
 
   </body>
